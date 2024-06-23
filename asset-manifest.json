@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/WebBanSach/static/css/main.8c123d91.css",
+    "main.js": "/WebBanSach/static/js/main.dd78195f.js",
+    "static/js/453.f69278dd.chunk.js": "/WebBanSach/static/js/453.f69278dd.chunk.js",
+    "static/media/vh2.jpg": "/WebBanSach/static/media/vh2.47f89a61108fd4aee831.jpg",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/WebBanSach/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/vh4.jpg": "/WebBanSach/static/media/vh4.40600ec24f2f735bbabd.jpg",
+    "static/media/bgg.jpg": "/WebBanSach/static/media/bgg.ae8abcf180b6ed9b0eee.jpg",
+    "static/media/tn2.jpg": "/WebBanSach/static/media/tn2.55af23c05cbfea457e30.jpg",
+    "static/media/tn3.jpg": "/WebBanSach/static/media/tn3.b142870f3f3e42b6f76e.jpg",
+    "static/media/fontawesome-webfont.eot": "/WebBanSach/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/WebBanSach/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/tn4.jpg": "/WebBanSach/static/media/tn4.f99576c52e0f5dd36296.jpg",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/WebBanSach/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/WebBanSach/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/tn1.jpg": "/WebBanSach/static/media/tn1.d9ce0584622b76d879e1.jpg",
+    "static/media/vh1.jpg": "/WebBanSach/static/media/vh1.39139fadf00836082809.jpg",
+    "static/media/bg.jpg": "/WebBanSach/static/media/bg.5077e8ee64d3823c27e3.jpg",
+    "index.html": "/WebBanSach/index.html",
+    "main.8c123d91.css.map": "/WebBanSach/static/css/main.8c123d91.css.map",
+    "main.dd78195f.js.map": "/WebBanSach/static/js/main.dd78195f.js.map",
+    "453.f69278dd.chunk.js.map": "/WebBanSach/static/js/453.f69278dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c123d91.css",
+    "static/js/main.dd78195f.js"
+  ]
+}
