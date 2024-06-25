@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import {
   Route,
   Routes,
@@ -28,7 +28,7 @@ import AddP from '../admin/AddProduct';
 import EditP from '../admin/EditProduct';
 import Thankyou from '../pages/Thankyou';
 // import Thankyou from '../pages/thankyou';
-
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -36,6 +36,7 @@ import Thankyou from '../pages/Thankyou';
 
 
 const ContainerRoutes = () => {
+  const location = useLocation();
   // const [cartItems, setCartItems] = useState([]); 
    const [authData, setAuthData] = useState(null); 
 
@@ -75,6 +76,41 @@ const ContainerRoutes = () => {
   const updateCartItems = (items) => {
     setCartItems(items);
   };
+
+  useEffect(() => {
+
+    const pathName = window.location.pathname.replace('/','');
+    if(['login', 'register', 'forgotpassword'].includes(pathName) || window.location.pathname ==='/') return;
+
+    try {
+      const authData = localStorage.getItem("auth-data");
+      /**
+       * TH1: không có auth-data
+       * TH2: auth-data không phải dạng obj -> sẽ parse bị lỗi
+       * TH3: là dạng obj nhưng rỗng
+       */
+      if (!authData || !Object.keys(JSON.parse(authData)).length) {
+        throw new Error("auth data error");
+      }
+      const ADMIN_PATHS = [
+        "homeAd",
+        "orderManagement",
+        "productManagement",
+        "userManagement",
+        "addUser",
+        "editUser",
+        "addProduct",
+        "editProduct",
+      ];
+      if (!ADMIN_PATHS.includes(pathName)) return;
+      
+      if(JSON.parse(authData)?.role === 1) throw new Error('not admin');
+
+    } catch (error) {
+      localStorage.removeItem("auth-data");
+      window.location.replace("/login");
+    }
+  }, [location.pathname]);//chạu liên tục khi mà thay đổi đường link ui
   return (
     <>
       <Header cartItems={cartItems} /> {/* truyền cartItems làm prop cho Header */}
