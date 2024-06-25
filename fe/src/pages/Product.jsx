@@ -65,7 +65,7 @@ const Product = () => {
         const keyword = e.target.value;
         setSearchKeyword(keyword);
 
-        // Gửi yêu cầu tìm kiếm qua AJAX nếu có từ khóa
+        // Gửi yêu cầu tìm kiếm qua axios nếu có từ khóa
         if (keyword.trim() !== '') {
             try {
                 const response = await axios.get(`http://localhost:8080/book/search?keyword=${keyword}`);
